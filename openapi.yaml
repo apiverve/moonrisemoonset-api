@@ -1,46 +1,48 @@
 openapi: 3.0.4
 info:
   title: Moonrise Moonset
-  description: Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.
+  description: >-
+    Moonrise Moonset is a simple tool for getting moonrise and moonset times. It
+    returns the moonrise and moonset times based on the location provided.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/moonrisemoonset:
     get:
       summary: Get Moonrise and Moonset Times
-      description: Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.
+      description: Get moonrise and moonset times based on the location
       operationId: moonrisemoonset
       parameters:
-      - name: lat
-        in: query
-        schema:
-          type: number
-        required: true
-        description: The latitude of the location
-        example: '37.7749'
-      - name: lon
-        in: query
-        schema:
-          type: number
-        required: true
-        description: The longitude of the location
-        example: '-122.4194'
-      - name: date
-        in: query
-        schema:
-          type: string
-        required: false
-        description: The date to get the moonrise and moonset times for (MM-dd-yyyy)
-        example: 12-03-2025
+        - name: lat
+          in: query
+          schema:
+            type: number
+          required: true
+          description: The latitude of the location
+          example: 37.7749
+        - name: lon
+          in: query
+          schema:
+            type: number
+          required: true
+          description: The longitude of the location
+          example: -122.4194
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: The date to get the moonrise and moonset times for (MM-dd-yyyy)
+          example: 01-16-2026
       responses:
         '200':
           description: Successful Response
@@ -56,18 +58,18 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   coordinates:
                     latitude: 37.7749
                     longitude: -122.4194
-                  phase: Last Quarter
-                  moonrise: 2025-02-20T09:11:27.1010000Z
-                  moonset: 2025-02-20T18:44:40.0060000Z
+                  phase: Waning Crescent
+                  moonrise: '2025-12-16T12:24:41.532Z'
+                  moonset: '2025-12-16T22:22:04.027Z'
                   moonAlwaysUp: false
                   moonAlwaysDown: false
         '401':
@@ -75,7 +77,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -83,4 +85,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
