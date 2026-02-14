@@ -17,7 +17,7 @@ const api = new moonrisemoonsetAPI({
 var query = {
   lat: 37.7749,
   lon: -122.4194,
-  date: "12-02-2025"
+  date: "01-16-2026"
 };
 
 // Make the API request using callback
