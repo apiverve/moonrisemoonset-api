@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_moonrisemoonset',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/moonrisemoonset',
-        'Source': 'https://github.com/apiverve/moonrisemoonset-api',
-        'Bug Tracker': 'https://github.com/apiverve/moonrisemoonset-api/issues'
-    },
+    url='https://moonrisemoonset.apiverve.com?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
