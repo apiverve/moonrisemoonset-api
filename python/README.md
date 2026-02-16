@@ -44,7 +44,11 @@ from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient
 # Initialize the client with your APIVerve API key
 api = MoonrisemoonsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 ```
 
 ###### Simple Request
@@ -128,7 +136,11 @@ from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient, Moonris
 
 api = MoonrisemoonsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 
 try:
     result = api.execute(query)
@@ -149,7 +161,11 @@ from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient, Moonris
 
 api = MoonrisemoonsetAPIClient("[YOUR_API_KEY]")
 
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 
 try:
     result = api.execute(query)
@@ -183,7 +199,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient, MoonrisemoonsetAPIClientError
 
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 
 # Using context manager ensures proper cleanup
 with MoonrisemoonsetAPIClient("[YOUR_API_KEY]") as api:
@@ -209,7 +229,11 @@ from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient
 # Enable debug mode
 api = MoonrisemoonsetAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -224,8 +248,13 @@ from apiverve_moonrisemoonset.apiClient import MoonrisemoonsetAPIClient
 
 api = MoonrisemoonsetAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "lat": 37.7749,
+    "lon": -122.4194,
+    "date": "01-16-2026"
+}
+
 try:
-    query = { "lat": 37.7749, "lon": -122.4194, "date": "01-16-2026" }
     result = api.execute(query)
     print(result)
 finally:
