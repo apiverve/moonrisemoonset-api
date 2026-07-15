@@ -132,9 +132,9 @@ async function makeRequest() {
       "latitude": 37.7749,
       "longitude": -122.4194
     },
-    "phase": "Last Quarter",
-    "moonrise": "2025-02-20T09:11:27.101Z",
-    "moonset": "2025-02-20T18:44:40.006Z",
+    "phase": "Waning Crescent",
+    "moonrise": "2025-12-16T12:24:41.532Z",
+    "moonset": "2025-12-16T22:22:04.027Z",
     "moonAlwaysUp": false,
     "moonAlwaysDown": false
   }
