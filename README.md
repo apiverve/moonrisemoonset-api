@@ -30,7 +30,12 @@ The Moonrise Moonset API provides a simple, reliable way to integrate moonrise m
 ```javascript
 async function callMoonriseMoonsetAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/moonrisemoonset', {
+        const params = new URLSearchParams({
+            lat: 37.7749,
+            lon: -122.4194
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/moonrisemoonset?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +55,7 @@ callMoonriseMoonsetAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/moonrisemoonset?param=value" \
+curl -X GET "https://api.apiverve.com/v1/moonrisemoonset?lat=37.7749&lon=-122.4194" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +155,7 @@ go get github.com/apiverve/moonrisemoonset-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +174,7 @@ go get github.com/apiverve/moonrisemoonset-api/go
 The Moonrise Moonset API is commonly used for:
 
 - **Web Applications** - Add moonrise moonset features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with moonrise moonset capabilities
 - **Data Pipelines** - Process and analyze data at scale
