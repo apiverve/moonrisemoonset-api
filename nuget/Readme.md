@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.MoonriseMoonset;
 
 class Program
 {
@@ -60,10 +60,10 @@ class Program
         // Initialize the API client
         var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+        var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
         // Make the API call
@@ -118,7 +118,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.MoonriseMoonset;
 
 public class Example
 {
@@ -126,10 +126,10 @@ public class Example
     {
         var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+        var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -152,7 +152,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.MoonriseMoonset;
 
 public class Example
 {
@@ -160,10 +160,10 @@ public class Example
     {
         var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+        var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -191,7 +191,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.MoonriseMoonset;
 
 public class Example
 {
@@ -199,10 +199,10 @@ public class Example
     {
         var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+        var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
         try
@@ -245,7 +245,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.MoonriseMoonset;
 
 public class Example
 {
@@ -257,10 +257,10 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+        var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
         try
@@ -300,10 +300,10 @@ var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -328,10 +328,10 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -348,10 +348,10 @@ var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -362,10 +362,10 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
-    lat = 37.7749,
-    lon = -122.4194,
-    date = "01-16-2026"
+var queryOptions = new MoonriseMoonsetQueryOptions {
+    Lat = 37.7749,
+    Lon = -122.4194,
+    Date = "01-16-2026"
 };
 
 using (var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]"))
@@ -389,9 +389,9 @@ using (var apiClient = new MoonriseMoonsetAPIClient("[YOUR_API_KEY]"))
       "latitude": 37.7749,
       "longitude": -122.4194
     },
-    "phase": "Last Quarter",
-    "moonrise": "2025-02-20T09:11:27.101Z",
-    "moonset": "2025-02-20T18:44:40.006Z",
+    "phase": "Waning Crescent",
+    "moonrise": "2025-12-16T12:24:41.532Z",
+    "moonset": "2025-12-16T22:22:04.027Z",
     "moonAlwaysUp": false,
     "moonAlwaysDown": false
   }
