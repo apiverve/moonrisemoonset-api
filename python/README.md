@@ -1,13 +1,12 @@
 Moonrise Moonset API
 ============
 
-Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.
+Moonrise Moonset calculates exact moonrise and moonset times for any geographic coordinate. It outputs ISO 8601 timestamps for lunar rise and set events, with paid plans adding moon phase details and date selection.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Moonrise Moonset API](https://moonrisemoonset.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-moonrisemoonset.svg)](https://pypi.org/project/apiverve-moonrisemoonset/)
+
+This is a Python wrapper for the [Moonrise Moonset API](https://apiverve.com/marketplace/moonrisemoonset?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-moonrisemoonset
 
 ## Configuration
 
-Before using the moonrisemoonset API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Moonrise Moonset API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -64,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Moonrise Moonset API documentation is found here: [https://docs.apiverve.com/ref/moonrisemoonset](https://docs.apiverve.com/ref/moonrisemoonset?utm_source=pypi&utm_medium=readme).
+The Moonrise Moonset API documentation is found here: [https://docs.apiverve.com/ref/moonrisemoonset](https://docs.apiverve.com/ref/moonrisemoonset?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -114,9 +113,9 @@ print(result)
       "latitude": 37.7749,
       "longitude": -122.4194
     },
-    "phase": "Last Quarter",
-    "moonrise": "2025-02-20T09:11:27.101Z",
-    "moonset": "2025-02-20T18:44:40.006Z",
+    "phase": "Waning Crescent",
+    "moonrise": "2025-12-16T12:24:41.532Z",
+    "moonset": "2025-12-16T22:22:04.027Z",
     "moonAlwaysUp": false,
     "moonAlwaysDown": false
   }
@@ -266,7 +265,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -277,12 +276,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
