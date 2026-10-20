@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Moonrise Moonset
   description: >-
-    Moonrise Moonset is a simple tool for getting moonrise and moonset times. It
-    returns the moonrise and moonset times based on the location provided.
+    Moonrise Moonset calculates exact moonrise and moonset times for any
+    geographic coordinate. It outputs ISO 8601 timestamps for lunar rise and set
+    events, with paid plans adding moon phase details and date selection.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/moonrisemoonset:
     get:
-      summary: Get Moonrise and Moonset Times
+      summary: Moonrise Moonset
       description: Get moonrise and moonset times based on the location
       operationId: moonrisemoonset
       parameters:

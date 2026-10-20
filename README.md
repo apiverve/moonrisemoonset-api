@@ -1,13 +1,13 @@
-# [Moonrise Moonset API](https://moonrisemoonset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Moonrise Moonset API](https://apiverve.com/marketplace/moonrisemoonset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.
+Moonrise Moonset calculates exact moonrise and moonset times for any geographic coordinate. It outputs ISO 8601 timestamps for lunar rise and set events, with paid plans adding moon phase details and date selection.
 
 The Moonrise Moonset API provides a simple, reliable way to integrate moonrise moonset functionality into your applications. Built for developers who need production-ready moonrise moonset capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://moonrisemoonset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/moonrisemoonset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://moonrisemoonset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/moonrisemoonset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -162,7 +162,7 @@ go get github.com/apiverve/moonrisemoonset-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Moonrise Moonset API](https://moonrisemoonset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Moonrise Moonset API](https://apiverve.com/marketplace/moonrisemoonset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/moonrisemoonset](https://docs.apiverve.com/ref/moonrisemoonset)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -192,11 +192,36 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Moonrise Moonset API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "coordinates": {
+      "latitude": 37.7749,
+      "longitude": -122.4194
+    },
+    "phase": "Waning Crescent",
+    "moonrise": "2025-12-16T12:24:41.532Z",
+    "moonset": "2025-12-16T22:22:04.027Z",
+    "moonAlwaysUp": false,
+    "moonAlwaysDown": false
+  }
 }
 ```
 
@@ -204,7 +229,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Moonrise Moonset API](https://moonrisemoonset.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Moonrise Moonset API](https://apiverve.com/marketplace/moonrisemoonset?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
