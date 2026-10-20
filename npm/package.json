@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/moonrisemoonset",
-  "version": "1.2.0",
-  "description": "Moonrise Moonset is a simple tool for getting moonrise and moonset times. It returns the moonrise and moonset times based on the location provided.",
+  "version": "1.2.2",
+  "description": "Moonrise Moonset calculates exact moonrise and moonset times for any geographic coordinate. It outputs ISO 8601 timestamps for lunar rise and set events, with paid plans adding moon phase details and date selection.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "moonrise moonset", "moonrise moonset api", "moonrise moonset tool", "moonrise moonset software", "moonrise moonset service"
+    "moonrise moonset api", "moon api", "moonrise api", "moonset api", "moonrise times"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/moonrisemoonset-api/issues"
   },
-  "homepage": "https://moonrisemoonset.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/moonrisemoonset?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
