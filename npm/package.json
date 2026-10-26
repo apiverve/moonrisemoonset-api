@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/moonrisemoonset",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Moonrise Moonset calculates exact moonrise and moonset times for any geographic coordinate. It outputs ISO 8601 timestamps for lunar rise and set events, with paid plans adding moon phase details and date selection.",
   "main": "index.js",
   "types": "index.d.ts",
